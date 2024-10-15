@@ -1,5 +1,6 @@
 import React from "react";
-import { FaReact, FaNodeJs, FaAws, FaLaptopCode, FaDatabase, FaPhp, FaWordpress, FaFigma, FaAppStore, FaAndroid } from "react-icons/fa";
+import { FaReact, FaNodeJs, FaAws,  FaDatabase, FaPhp, FaWordpress, FaFigma, FaAndroid } from "react-icons/fa";
+// import { FaReact, FaNodeJs, FaAws, FaLaptopCode, FaDatabase, FaPhp, FaWordpress, FaFigma, FaAppStore, FaAndroid } from "react-icons/fa";
 import { FiUser } from "react-icons/fi";
 import Testimonials from "../components/Testimonials";
 import Head from "next/head";

@@ -18,7 +18,7 @@ const Testimonials: React.FC<TestimonialProps> = ({ testimonials }) => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {testimonials.map((testimonial, index) => (
             <div key={index} className="p-6 bg-white rounded-lg shadow-lg transition-transform transform hover:scale-105">
-              <blockquote className="text-lg italic mb-4">"{testimonial.quote}"</blockquote>
+              <blockquote className="text-lg italic mb-4">&quot;{testimonial.quote}&quot;</blockquote>
               <p className="text-xl font-bold">{testimonial.name}</p>
               <p className="text-gray-600">{testimonial.company}</p>
             </div>

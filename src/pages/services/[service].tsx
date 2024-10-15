@@ -11,14 +11,14 @@ interface ServiceProps {
     content: string,
 }
 
-const service: React.FC<ServiceProps> = ({ title, description, content }) => {
+const ServicePage: React.FC<ServiceProps> = ({ title, description, content }) => {
     const router=useRouter();
     console.log(router.query.service)
-    const [titleName,setitle]=useState<string>(""+router.query.service)
+    // const [titleName,setitle]=useState<string>(""+router.query.service)
     return (
         <>
         <Head>
-            <title>{titleName}</title>
+            <title>{router.query.service}</title>
         </Head>
             <Navbar />
             <main className="container mx-auto my-12">
@@ -63,4 +63,4 @@ export const getStaticProps: GetStaticProps = async (context) => {
     props: data[service] || {},
   };
 };
-export default service
+export default ServicePage

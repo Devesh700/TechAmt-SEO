@@ -1,5 +1,5 @@
 import React from "react";
-import SpinningWebCircle from "./SpinningWebCircle";
+// import SpinningWebCircle from "./SpinningWebCircle";
 
 interface HeroProps {
   title: string;

@@ -14,7 +14,7 @@ const WhyWorkWithUs = () => (
           <img src="/images/work-life-balance.svg" alt="Work-Life Balance" className="mb-4 w-24 mx-auto" />
           <h3 className="text-xl font-semibold mb-2">Work-Life Balance</h3>
           <p>
-            We prioritize our employees' work-life balance, allowing them to thrive both professionally and personally.
+            We prioritize our employees&apos; work-life balance, allowing them to thrive both professionally and personally.
           </p>
         </div>
         <div className="flex-1 max-w-sm">
