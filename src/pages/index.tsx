@@ -51,7 +51,7 @@ const Home: React.FC = () => {
         title="Innovative IT Solutions"
         subtitle="We help you achieve digital excellence with our expert IT services."
         ctaText="Get Started"
-        ctaLink="/services"
+        ctaLink="#services"
       />
       <Services services={services} />
       <FeaturedProjects/>

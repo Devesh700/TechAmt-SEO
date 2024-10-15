@@ -18,7 +18,7 @@ const Hero: React.FC<HeroProps> = ({ title, subtitle, ctaText, ctaLink }) => {
         <h1 className="text-5xl md:text-6xl font-extrabold text-white mb-4 drop-shadow-lg">{title}</h1>
         <p className="text-xl md:text-2xl text-gray-300 mb-6">{subtitle}</p>
         <a
-          href={"#services"}
+          href={ctaLink}
           className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold shadow-md transform transition duration-300 hover:scale-105 hover:shadow-lg"
         >
           {ctaText}
