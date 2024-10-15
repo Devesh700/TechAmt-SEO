@@ -1,0 +1,14 @@
+# Redirect root to the home page
+/          /home
+
+# Redirect services page
+/services  /services
+
+# Redirect contact page
+/contact   /contact
+
+# Redirect about page
+/about     /about-us
+
+# 404 Redirects
+/*         /404.html  # Catch-all for undefined routes
