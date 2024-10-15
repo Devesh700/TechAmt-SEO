@@ -6,6 +6,7 @@ import Services from '../components/Services';
 import Testimonials from '../components/Testimonials';
 import { FaLaptopCode, FaMobileAlt, FaShoppingCart } from 'react-icons/fa';
 import Head from 'next/head';
+import FeaturedProjects from '../components/FeaturedProjects';
 
 const Home: React.FC = () => {
   const services = [
@@ -41,9 +42,10 @@ const Home: React.FC = () => {
 
   return (
     <>
-    <Head>
-      <title>Home</title>
-    </Head>
+      <Head>
+        <title>Home - Techamt</title>
+        <meta name="description" content="Innovative IT solutions including web development, app development, and eCommerce solutions." />
+      </Head>
       <Navbar />
       <Hero
         title="Innovative IT Solutions"
@@ -52,6 +54,7 @@ const Home: React.FC = () => {
         ctaLink="/services"
       />
       <Services services={services} />
+      <FeaturedProjects/>
       <Testimonials testimonials={testimonials} />
       <Footer />
     </>

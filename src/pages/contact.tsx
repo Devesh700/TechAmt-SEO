@@ -51,7 +51,7 @@ const ContactPage: React.FC = () => {
             onChange={(e) => setFormData({ ...formData, message: e.target.value })}
             required
           />
-          <button type="submit" className="bg-blue-600 text-white py-3 px-6 rounded-lg">Send Message</button>
+          <button type="submit" className="bg-primary text-white py-3 px-6 rounded-lg">Send Message</button>
         </form>
       </main>
       <Footer />
