@@ -5,14 +5,18 @@ import { GetStaticPaths, GetStaticProps } from "next";
 import Head from "next/head";
 import { useRouter } from "next/router";
 
-interface ServiceProps {
+interface Service {
     title: string,
     description: string,
     content: string,
 }
+interface ServiceProps{
+  service:Service;
+}
 
-const ServicePage: React.FC<ServiceProps> = ({ title, description, content }) => {
+const ServicePage: React.FC<ServiceProps> = ({service}) => {
     const router=useRouter();
+    const { title, description, content }=service;
     console.log(router.query.service)
     // const [titleName,setitle]=useState<string>(""+router.query.service)
     return (
@@ -41,7 +45,7 @@ export const getStaticPaths:GetStaticPaths=()=>{
 
 export const getStaticProps: GetStaticProps = async (context) => {
   const { service } = context.params as { service: string };
-  const data = {
+  const data:{[key:string]:ServiceProps["service"]} = {
     'web-development': {
       title: 'Web Development',
       description: 'Fast, responsive websites built for SEO and performance.',

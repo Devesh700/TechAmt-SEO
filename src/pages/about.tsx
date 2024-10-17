@@ -73,7 +73,8 @@ const AboutUs: React.FC = () => {
           <h2 className="text-4xl font-bold text-center mb-12">Meet Our Team</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center">
-              <FiUser className="text-6xl text-primary mb-4" />
+              {/* <FiUser className="text-6xl text-primary mb-4" /> */}
+              <FiUser  />
               <h3 className="text-2xl font-bold">Manish Mani Tripathi</h3>
               <p className="text-gray-600 mb-2">CEO & Founder</p>
               <p className="text-gray-600">
@@ -81,7 +82,8 @@ const AboutUs: React.FC = () => {
               </p>
             </div>
             <div className="text-center">
-              <FiUser className="text-6xl text-primary mb-4" />
+              <FiUser  />
+              {/* <FiUser className="text-6xl text-primary mb-4" /> */}
               <h3 className="text-2xl font-bold">Devesh Mishra</h3>
               <p className="text-gray-600 mb-2">Full Stack Developer</p>
               <p className="text-gray-600">
@@ -89,7 +91,8 @@ const AboutUs: React.FC = () => {
               </p>
             </div>
             <div className="text-center">
-              <FiUser className="text-6xl text-primary mb-4" />
+              <FiUser  />
+              {/* <FiUser className="text-6xl text-primary mb-4" /> */}
               <h3 className="text-2xl font-bold">Dummy User</h3>
               <p className="text-gray-600 mb-2">Lead Developer</p>
               <p className="text-gray-600">

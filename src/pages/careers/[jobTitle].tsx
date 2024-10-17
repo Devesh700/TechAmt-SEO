@@ -63,7 +63,7 @@ export const getStaticProps: GetStaticProps = (context) => {
     console.log("context",context);
     console.log("contextparams",context.params);
     const {jobTitle}=context.params as {jobTitle:string};
-    const jobs = {
+    const jobs:{[key:string]:JobProp["job"]} = {
     'frontend-developer': {
       title: 'Frontend Developer',
       description: 'React, Next.js, Tailwind CSS',

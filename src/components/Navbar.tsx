@@ -1,6 +1,8 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import Link from 'next/link'; // To use internal navigation
 import { FaHome, FaInfoCircle, FaBriefcase, FaBlog, FaPhoneAlt } from 'react-icons/fa';
+import Image from 'next/image';
+import logo from "../../public/logo.png";
 
 const Navbar: React.FC = () => {
   const [isSticky, setIsSticky] = useState(false);
@@ -34,7 +36,9 @@ const Navbar: React.FC = () => {
       <div className="container mx-auto flex justify-between items-center">
         {/* Logo */}
         <h1 className="text-white text-xl font-bold">
-          <Link href="/">Techamt</Link>
+          <Link href="/">
+            <Image src={logo} alt='logo' width={100} height={100}/>
+          </Link>
         </h1>
 
         {/* Desktop Menu */}
