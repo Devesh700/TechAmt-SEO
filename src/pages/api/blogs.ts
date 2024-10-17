@@ -1,5 +1,5 @@
 import { NextApiRequest, NextApiResponse } from "next";
-import { NextRequest, NextResponse } from "next/server";
+// import { NextRequest, NextResponse } from "next/server";
 const blogs=[
     {
       id: '1',

@@ -179,6 +179,7 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }: { params: { slug: string } }) {
   // Fetch the blog post content by slug
+  console.log(params);
   const post = {
     id: '1',
     title: 'Building Scalable Web Applications',
