@@ -16,6 +16,15 @@ interface ServiceProps{
 
 const ServicePage: React.FC<ServiceProps> = ({service}) => {
     const router=useRouter();
+     if (!service) {
+    return (
+      <div>
+        <h1>Service not found</h1>
+        <p>The requested service could not be found.</p>
+      </div>
+    );
+  }
+
     const { title, description, content }=service;
     console.log(router.query.service)
     // const [titleName,setitle]=useState<string>(""+router.query.service)
