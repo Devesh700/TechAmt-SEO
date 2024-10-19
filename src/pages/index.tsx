@@ -7,8 +7,10 @@ import Testimonials from '../components/Testimonials';
 import { FaLaptopCode, FaMobileAlt, FaShoppingCart } from 'react-icons/fa';
 import Head from 'next/head';
 import FeaturedProjects from '../components/FeaturedProjects';
+import connectDb from './api/utils/connectDb';
 
 const Home: React.FC = () => {
+  connectDb();
   const services = [
     {
       title: 'Web Development',
