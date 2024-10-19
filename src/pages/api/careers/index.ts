@@ -19,7 +19,7 @@ async function handler(req: NextApiRequest, res: NextApiResponse) {
       const { title, description, location, employmentType } = req.body;
       
       // Check if the career already exists
-      let existingCareer = await Career.findOne({ title, description, location, employmentType });
+      const existingCareer = await Career.findOne({ title, description, location, employmentType });
       if (existingCareer) {
         return res.status(409).json({ message: "Career option already present in database" });
       }

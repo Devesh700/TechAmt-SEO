@@ -17,6 +17,6 @@ export const protectRoute = (handler: any) => async (req: ApiRequest, res: NextA
     req.user = decoded; // Attach user info to request
     return handler(req, res);
   } catch (error) {
-    return res.status(401).json({ message: 'Invalid token' });
+    return res.status(401).json({ message: 'Invalid token',error:error });
   }
 };

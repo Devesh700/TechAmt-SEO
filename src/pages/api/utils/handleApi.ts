@@ -7,11 +7,13 @@ export default function handleApi(handler: HandlerFn) {
   return async (req: NextApiRequest, res: NextApiResponse) => {
     try {
       await handler(req, res);
-    } catch (error: any) {
+    } catch (error:unknown) {
+      const errorMessage=error instanceof Error?error.message:"an unknown error occured";
+      const status =(error as any )?.status || 500;
       console.error('API Error:', error);
-      res.status(error.status || 500).json({
+      res.status(status).json({
         success: false,
-        message: error.message || 'An unexpected error occurred',
+        message: errorMessage || 'An unexpected error occurred',
         error: process.env.NODE_ENV === 'development' ? error : {}, // Send detailed errors only in development
       });
     }
