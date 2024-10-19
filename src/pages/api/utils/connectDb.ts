@@ -5,7 +5,7 @@ const allowedRetry = 5;
 
 export default async function connectDb() {
   // Check if mongoose.connections exists and has at least one connection
-  if (mongoose.connections.length > 0 && mongoose.connections[0].readyState) {
+  if (mongoose?.connections?.length > 0 && mongoose.connections[0].readyState) {
     console.log("Database already connected");
     return;
   }
@@ -28,6 +28,7 @@ export default async function connectDb() {
       return;
     }
     console.log("Database connection failed", error);
-    process.exit(1);
+    // process.exit(1);
+    return { success: false, message: "Database connection failed after retries", error };
   }
 }
